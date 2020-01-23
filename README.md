@@ -14,7 +14,25 @@ This is the assignment
   - Remove (DELETE) a draft or cancelled timecard
   - Replace (POST) a complete line item
   - Update (PATCH) a line item
+  json body needs an array of operation/s:
+  
+  [
+    {
+      "op": "replace",
+      "path": "/day",
+      "value": "monday"
+    },
+    {
+      "op": "replace",
+      "path": "/week",
+      "value": "29"
+    },
+]
   - Verify that timecard person is consistent throughout the timecard's lifetime
+  
+  [HV]>>API requests for (add, delete, replace & update lines) need to include 'reqid' k/v paramter to verify against timecard person.
+ example for add lines request: https://localhost:44341/timesheets/a90a93cf-1951-4eec-b059-2a42b2a3fba3/lines?reqid=10
+ 
   - Verify that timecard approver is not timecard person
   - Add support to root document for creating a timesheet
 
