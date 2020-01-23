@@ -14,7 +14,7 @@ This is the assignment
   - Remove (DELETE) a draft or cancelled timecard
   - Replace (POST) a complete line item
   - Update (PATCH) a line item
-  json body needs an array of operation/s:
+  [HV]>> json body needs an array of operation/s:
   
   [
     {
